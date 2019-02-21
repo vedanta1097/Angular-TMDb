@@ -1,0 +1,11 @@
+.movie-card-content p {
+  text-align: justify;
+}
+
+.movie-card-date {
+  font-weight: initial;
+}
+
+.view-more {
+  width: 100%;
+}

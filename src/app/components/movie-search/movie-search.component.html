@@ -1,0 +1,12 @@
+<div class="search-container">
+  <input #searchBox 
+      type="text" 
+      class="search-input" 
+      placeholder="Search movies" 
+      (input)="search(searchBox.value)">
+
+  <div class="result-container" *ngFor="let movie of movies$ | async">
+    <a class="result-title" routerLink="/movie/detail/{{ movie.id }}">{{ movie.title }}</a>
+    <mat-divider></mat-divider>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="home-header-background">
+  <div class="home-header-section">
+    <h1 class="mat-headline header-title">Angular Movie DB</h1>
+    <h2 class="header-subheading">Angular App Created with Material Design and The Movie DB API</h2>
+  </div>
+  <div class="search-container">
+    <app-movie-search></app-movie-search>
+  </div>
+</div>
+
+<div class="container">
+  <h1 class="mat-headline">Popular Movies</h1>
+  <div class="movie-card-container">
+    <div class="movie-card" *ngFor="let movie of popularMovies">
+      <app-movie-card-landscape [movie]="movie"></app-movie-card-landscape>
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <h1 class="mat-headline">Top Rated Movies</h1>
+  <div class="movie-card-container">
+    <div class="movie-card" *ngFor="let movie of topRatedMovies">
+      <app-movie-card-landscape [movie]="movie"></app-movie-card-landscape>
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <h1 class="mat-headline">Upcoming Movies</h1>
+  <div class="movie-card-container">
+    <div class="movie-card" *ngFor="let movie of upcomingMovies">
+      <app-movie-card-landscape [movie]="movie"></app-movie-card-landscape>
+    </div>
+  </div>
+</div>

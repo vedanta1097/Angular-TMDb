@@ -1,0 +1,11 @@
+<mat-card >
+  <div class="card-img-container">
+    <img src="{{ movie.posterPath }}" alt="{{ movie.title }}">
+  </div>
+  <div class="card-content-container">
+    <h2 class="mat-title card-title">{{ movie.title }}</h2>
+    <h3 class="mat-subheading-1 movie-card-date">{{ movie.releaseDate | date:'longDate' }}</h3>
+    <p class="mat-body movie-overview">{{ movie.overview | substring}}</p>
+    <a mat-raised-button class="view-more" routerLink="/movie/detail/{{ movie.id }}">More Info</a>
+  </div>
+</mat-card>

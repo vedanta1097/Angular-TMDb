@@ -1,0 +1,46 @@
+mat-card {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  max-width: 483px;
+  box-sizing: border-box;
+  padding: 0;
+  overflow: hidden;
+}
+
+.card-img-container {
+  min-width: 185px;
+  height: 278px;
+  display: block;
+}
+
+.card-content-container {
+  max-width: 298px;
+  height: 278px;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: block;
+  padding: 10px 16px 16px 16px;
+}
+
+.card-title {
+  margin: 0;
+}
+
+.movie-card-date {
+  font-weight: 300;
+  line-height: 1em;
+}
+
+.movie-overview {
+  text-align: justify;
+}
+
+.view-more {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,54 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerModule='/' 
+          routerLink="/" 
+          routerLinkActive="active-link" 
+          [routerLinkActiveOptions]="{exact:true}">
+        Home
+      </a>
+      <mat-list class="nav-child">
+        <h3 mat-subheader>Movies</h3>
+        <mat-list-item class="child-nav">
+          <a mat-line routerLink="/movie"
+              routerLinkActive="active-link" 
+              [routerLinkActiveOptions]="{exact:true}">
+            Popular
+          </a>
+        </mat-list-item>
+        <mat-list-item class="child-nav">
+          <a mat-line routerLink="/movie/top-rated"
+              routerLinkActive="active-link" 
+              [routerLinkActiveOptions]="{exact:true}">
+            Top Rated
+          </a>
+        </mat-list-item>
+        <mat-list-item class="child-nav">
+          <a mat-line routerLink="/movie/upcoming"
+              routerLinkActive="active-link" 
+              [routerLinkActiveOptions]="{exact:true}">
+            Upcoming
+          </a>
+        </mat-list-item>
+      </mat-list>    
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" [class.mat-elevation-z6]="true">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>The Movie Database</span>
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

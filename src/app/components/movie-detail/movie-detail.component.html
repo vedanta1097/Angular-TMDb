@@ -1,0 +1,22 @@
+<div class="container" *ngIf="movie">
+  <div class="img-container">
+    <img src="{{ movie.backdropPath }}" alt="{{ movie.title }}">
+  </div>
+  <div class="content-container">
+    <h1 class="mat-display-1">{{ movie.title }}</h1>
+    <mat-chip-list>
+      <mat-chip color="primary" selected>Score: {{ movie.voteAverage }}%</mat-chip>
+    </mat-chip-list>
+    <h3 class="subheader">Overview</h3>
+    <p class="text">{{ movie.overview }}</p>
+    <h3 class="subheader">Facts</h3>
+    <p class="text-bold">Status</p>
+    <p class="text">{{ movie.status }}</p>
+    <p class="text-bold">Runtime</p>
+    <p class="text">{{ movie.runtime | minuteToHour }}</p>
+    <p class="text-bold">Budget</p>
+    <p class="text">{{ movie.budget | currency }}</p>
+    <p class="text-bold">Revenue</p>
+    <p class="text">{{ movie.revenue | currency }}</p>
+  </div>
+</div>

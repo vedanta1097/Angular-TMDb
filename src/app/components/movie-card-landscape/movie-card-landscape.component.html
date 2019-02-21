@@ -1,0 +1,12 @@
+<mat-card>
+  <img mat-card-image src="{{ movie.backdropPath }}" alt="{{ movie.title }}">
+  <mat-card-content class="movie-card-content">
+    <h2 class="mat-title">{{ movie.title }}
+      <span class="movie-card-date">({{ movie.releaseDate | date:'yyyy' }})</span>
+    </h2>
+    <p class="mat-body">{{ movie.overview}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button class="view-more" mat-button routerLink="/movie/detail/{{ movie.id }}">More Info</button>
+  </mat-card-actions>
+</mat-card>
